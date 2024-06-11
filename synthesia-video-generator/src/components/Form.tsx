@@ -43,7 +43,12 @@ const Form: React.FC<FormProps> = ({ onSubmit, isLoading, error }) => {
     if (!isLoading) {
       setErrors({});
     }
-  }, [isLoading]);
+    if (error) {
+      setCompanyInfo("");
+      setProductInfo("");
+      setTargetGroupProfile("");
+    }
+  }, [isLoading, error]);
 
   return (
     <>
