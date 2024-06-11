@@ -6,6 +6,7 @@ import {
   downloadVideo,
 } from "./api/generateVideo";
 import "./App.css";
+import VideoList from "./components/VideoList/VideoList";
 
 const App: React.FC = () => {
   const [videoUrl, setVideoUrl] = useState<string>("");
@@ -58,6 +59,7 @@ const App: React.FC = () => {
           </button>
         </div>
       )}
+      <VideoList videoCreated={videoUrl} />
     </div>
   );
 };

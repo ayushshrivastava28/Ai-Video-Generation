@@ -75,3 +75,21 @@ export const downloadVideo = async (downloadUrl: string) => {
     document.body.appendChild(link);
     link.click();
 };
+
+// Function to fetch list of generated videos
+export const fetchVideos = async (): Promise<any> => {
+    const options = {
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            Authorization: API_KEY!
+        }
+    };
+
+    const response = await fetch(`${BASE_URL}/videos?limit=20&offset=0`, options);
+    if (!response.ok) {
+        throw new Error('Error fetching videos');
+    }
+
+    return response.json();
+};
