@@ -37,7 +37,6 @@ const App: React.FC = () => {
         await new Promise((resolve) => setTimeout(resolve, 30000)); // Wait for 30 seconds before checking status again
       } while (video.status !== "complete");
     } catch (error: any) {
-      console.error("Error generating video:", error);
       setError(
         error.message ||
           "An unexpected error occurred while generating the video."

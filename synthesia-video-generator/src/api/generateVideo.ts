@@ -33,7 +33,7 @@ export const createVideo = async (scriptText: string, title: string): Promise<st
 
     const response = await fetch(`${BASE_URL}/videos`, options);
     if (!response.ok) {
-        throw new Error('Error creating video');
+        throw new Error('Daily limit is exceeded! Please try again after sometime.');
     }
 
     const data = await response.json();
