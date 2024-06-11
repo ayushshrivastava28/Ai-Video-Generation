@@ -1,0 +1,59 @@
+/* Form.css */
+
+.error {
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+.form-card {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .form-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-card label {
+    font-weight: bold;
+  }
+  
+  .form-card textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-card button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .form-card {
+      margin: 10px auto; /* Adjusted margin */
+      max-width: 90%;
+    }
+  
+    .form-card textarea,
+    .form-card button {
+      width: 100%; /* Adjusted width for smaller screens */
+    }
+  }
+  
