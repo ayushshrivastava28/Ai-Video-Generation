@@ -56,6 +56,12 @@ h1 {
   .container {
     padding: 10px;
   }
+  .generated-video-container video {
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
   input[type="text"],
   textarea {
